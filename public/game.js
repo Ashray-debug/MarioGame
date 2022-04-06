@@ -189,7 +189,7 @@ fetch('http://localhost:8000/getCourseById?course=624c78e2a62f475c8b6a60ee').the
         {
             console.log("btnClicked");
             score+=10;
-            document.getElementById('cPercent').innerHTML=score;
+            document.getElementById('cPercent').innerHTML=score+"%";
             completedbtn.disabled = true;
 
             if(score === 30){
