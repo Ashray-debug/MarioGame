@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 
 <head>
     <title>Mario Bros CV - Miquel Camps</title>
@@ -36,7 +36,7 @@
 
 
 
-    <div id="scroll">
+    <div id="scroll" style="visibility: hidden" class="game">
 
 
         <div id="box1" class="bdobox">
@@ -96,13 +96,26 @@
 
 
 
-
-    <script src="public/game.js?v=6"></script>
+    <!--<div class="container mx-auto mt-4">-->
+    <center>
+        <div class="row" id="startCourse" >
+        </div>
+    </center>
+    <script src="public/game.js?v=6" defer></script>
 
 
     <audio id="bg_music" loop>
         <source src="public/music.mp3" type="audio/mp3"></audio>
 
+
+
+
+
+
+
+    </div>
+</div>
+</div>
 
 </body>
 
