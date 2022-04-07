@@ -71,15 +71,15 @@ function moveTo(pos) {
 }
 
 
-// function playMusic() {
-//     if (!music_play) {
-//         document.getElementById("bg_music").play();
-//         music_play = true;
-//     }
-// }
+function playMusic() {
+    if (!music_play) {
+        document.getElementById("bg_music").play();
+        music_play = true;
+    }
+}
 
 function moveLeft() {
-    // playMusic();
+    playMusic();
 
     direction = false;
     if (!interval_left) {
@@ -90,7 +90,7 @@ function moveLeft() {
 }
 
 function moveRight() {
-    // playMusic();
+    playMusic();
 
     direction = false;
     if (!interval_right) {
@@ -113,7 +113,7 @@ function stopMove() {
 $(function () {
 
     $("body, #scroll").click(function () {
-        // playMusic();
+        playMusic();
     });
 
     $("body").keydown(function (e) {
@@ -144,7 +144,7 @@ $(function () {
 
 
 let score=0;
-fetch('http://localhost:8000/getCourseById?course=624c78e2a62f475c8b6a60ee').then((data) => {
+fetch('http://localhost:8000/getCourseById?course=624f1949a62f475c8b6a60ef').then((data) => {
     return data.json();
 }).then((completedata)=>{
 
@@ -196,11 +196,11 @@ fetch('http://localhost:8000/getCourseById?course=624c78e2a62f475c8b6a60ee').the
         completedbtn.onclick = () =>
         {
             console.log("btnClicked");
-            score+=10;
-            document.getElementById('cPercent').innerHTML=score+"%";
+            score+=(10);
+            document.getElementById('cPercent').innerHTML=score+'/70';
             completedbtn.disabled = true;
 
-            if(score === 30){
+            if(score === completedbtns.length*10){
                 let element = document.getElementById("successBanner")
                 element.style.visibility = 'visible';     // Show
 
